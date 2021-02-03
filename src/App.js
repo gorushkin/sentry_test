@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 
+const clickHandler = () => {
+  console.log('click');
+  throw new Error('Alarm!!!');
+};
+
+const methodDoesNotExist = () => {
+  throw new Error('Alarm!!!');
+};
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // return (
+  //   <div className="App">
+  //     <button onClick={clickHandler} >Click</button>
+  //   </div>
+  // );
+  return <button onClick={methodDoesNotExist}>Break the world</button>;
 }
 
 export default App;
