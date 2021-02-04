@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Integrations } from "@sentry/tracing";
-import * as Sentry from "@sentry/react";
 import App from './App';
 
 Sentry.init({
