@@ -2,23 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import * as Sentry from '@sentry/react';
+import * as Sentry from "@sentry/react";
 import App from './App';
 
 Sentry.init({
-  dsn: 'https://755bccd782164d09812c03648c0ef777@o515086.ingest.sentry.io/5621749',
+  dsn: "https://755bccd782164d09812c03648c0ef777@o515086.ingest.sentry.io/5621749",
 });
 
-function FallbackComponent() {
-  return <div>An error has occurred</div>;
-}
-
-const myFallback = <FallbackComponent />;
-
 ReactDOM.render(
-  <Sentry.ErrorBoundary fallback={myFallback}>
+  <React.StrictMode>
     <App />
-  </Sentry.ErrorBoundary>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
