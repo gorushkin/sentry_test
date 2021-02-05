@@ -1,7 +1,7 @@
 import './App.css';
 import * as Sentry from '@sentry/react';
 import { useState } from 'react';
-import ErrorBoundary from './ErrorBoundary.jsx';
+// import ErrorBoundary from './ErrorBoundary.jsx';
 
 const Btn = () => {
   const [counter, setCounter] = useState(0);
