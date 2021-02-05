@@ -9,8 +9,14 @@ Sentry.init({
   dsn: 'https://755bccd782164d09812c03648c0ef777@o515086.ingest.sentry.io/5621749',
 });
 
+function FallbackComponent() {
+  return <div>An error has occurred</div>;
+}
+
+const myFallback = <FallbackComponent />;
+
 ReactDOM.render(
-  <Sentry.ErrorBoundary fallback={'An error has occurred'}>
+  <Sentry.ErrorBoundary fallback={myFallback}>
     <App />
   </Sentry.ErrorBoundary>,
   document.getElementById('root')
